@@ -34,7 +34,13 @@ RSpec.describe MoviesController do
       expect(response.status).to eq 200
     end
 
+    it 'assigns @movie' do
+      movie = Movie.create!(valid_attributes)
+      get :show, id: movie
+      expect(assigns(:movie)). to eq movie
+
+    end
+
+
   end
-
-
 end
