@@ -14,13 +14,18 @@ RSpec.describe MoviesController do
       get :index
       expect(response.status).to eq 200
     end
-  end
 
-  it 'Renders the index' do
-    get :index
-    expect(response).to render_template('index')
-  end
+  # it 'Renders the index' do
+  #   get :index
+  #   expect(response).to render_template('index')
+  # end
 
+  it 'assigns @movies correctly' do
+    movies = Movie.all
+      get :index
+      expect(assigns(:movies)).to eq movies
+    end
+  end
 
 
 end
