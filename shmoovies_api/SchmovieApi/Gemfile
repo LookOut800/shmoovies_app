@@ -10,6 +10,8 @@ gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 gem 'nokogiri'
 gem 'yahoo-finance', github: 'herval/yahoo-finance'
 gem 'twitter'
+gem 'rb-readline'
+gem 'themoviedb', '~> 0.1.0'
 group :development, :test do
   gem 'capybara'
   gem 'rubocop'
