@@ -27,5 +27,14 @@ RSpec.describe MoviesController do
     end
   end
 
+  describe 'GET show' do
+    it 'has a 200 status code' do
+      movie = Movie.create!(valid_attributes)
+      get :show, id: movie
+      expect(response.status).to eq 200
+    end
+
+  end
+
 
 end
