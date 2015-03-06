@@ -1,17 +1,16 @@
 require 'rails_helper'
 
-describe 'Movies Requests' do
+describe 'Movie Requests' do
   before(:all) do
     Movie.destroy_all
-    Review.destroy_all
-    @movies = FactoryGirl.create_list(:post, 10)
-    @reviews = FactoryGirl.create_list(:comment, 15)
+    @movies = FactoryGirl.create_list(:movie, 25)
   end
-
-  describe'#index' do
-    it 'gets all the reviews for any movie' do
-      get "/movies/#{movies.first.id}/reviews"
+  describe '#index' do
+    it 'gets all of the movies' do
+      get '/movies'
       expect(response).to be_success
+      json = JSON.parse(response.body)
+      expect(json.length).to eq 25
     end
   end
 
