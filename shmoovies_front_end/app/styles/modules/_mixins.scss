@@ -1,0 +1,78 @@
+@mixin defaults {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+@mixin box-shadow($x: 0, $y: 0, $blur: 0, $spread: 0, $color: #000) {
+  -moz-box-shadow: $x $y $blur $spread $color;
+  -webkit-box-shadow: $x $y $blur $spread $color;
+  box-shadow: $x $y $blur $spread $color;
+}
+
+@mixin border-box($args) {
+  box-sizing: $args;
+}
+
+@mixin align-right {
+  float: right;
+}
+
+@mixin transition($prop, $duration: 0.2s, $timing: ease, $delay: 0) {
+  -webkit-transition: $prop $duration $timing $delay;
+  -moz-transition: $prop $duration $timing $delay;
+  -o-transition: $prop $duration $timing $delay;
+  transition: $prop $duration $timing $delay;
+  transition-property: $prop;
+  transition-duration: $duration;
+  transition-timing-function: $timing;
+  transition-delay: $delay;
+}
+
+@mixin transform($args) {
+  -webkit-transform: $args;
+   -moz-transform: $args;
+   -o-transform: $args;
+   -ms-transform: $args;
+   transform: $args;
+}
+
+@mixin afterIcon($url,$bgW,$bgH){
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  content: '';
+  width: $bgW;
+  height: $bgH;
+  background: url($url) no-repeat center center;
+}
+
+@mixin notification {
+  position:absolute;
+  top: 70px;
+  right: 10px;
+  width: auto;
+  height: auto;
+  background-color: $white;
+  padding: 6px 20px;
+  @include box-shadow(0,0,10px,0,#000);
+}
+
+@mixin button($bgcolor, $font-color, $border-radius) {
+  background-color: $bgcolor;
+  color: $font-color;
+  border-radius: $border-radius;
+  padding: 10px;
+  margin: 5px auto;
+  text-decoration: none;
+  width: auto;
+  display: inline-block;
+}
+
+@mixin inline-list {
+  display: inline-block;
+  list-style: none;
+}
+
