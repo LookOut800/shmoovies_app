@@ -1,0 +1,37 @@
+# Logfile created on 2015-03-05 15:50:44 -0500 by logger.rb/47272
+[03/05/15 15:50:44 -0500 Jasons-MacBook-Pro.local (61682)] INFO : Starting the New Relic agent in "development" environment.
+[03/05/15 15:50:44 -0500 Jasons-MacBook-Pro.local (61682)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[03/05/15 15:50:44 -0500 Jasons-MacBook-Pro.local (61682)] WARN : No configuration file found. Working directory = /Users/JWeeks/wdi/porjects/shmoovies_app/shmoovies_api/SchmovieApi
+[03/05/15 15:50:44 -0500 Jasons-MacBook-Pro.local (61682)] WARN : Looked in these locations (based on defaults): /Users/JWeeks/wdi/porjects/shmoovies_app/shmoovies_api/SchmovieApi/config/newrelic.yml, /Users/JWeeks/wdi/porjects/shmoovies_app/shmoovies_api/SchmovieApi/newrelic.yml, /Users/JWeeks/wdi/porjects/shmoovies_app/shmoovies_api/SchmovieApi/config/newrelic.yml, /Users/JWeeks/wdi/porjects/shmoovies_app/shmoovies_api/SchmovieApi/newrelic.yml, /Users/JWeeks/.newrelic/newrelic.yml, /Users/JWeeks/newrelic.yml
+[03/05/15 15:50:44 -0500 Jasons-MacBook-Pro.local (61682)] INFO : Environment: development
+[03/05/15 15:50:44 -0500 Jasons-MacBook-Pro.local (61682)] INFO : No known dispatcher detected.
+[03/05/15 15:50:44 -0500 Jasons-MacBook-Pro.local (61682)] INFO : Application: development
+[03/05/15 15:50:44 -0500 Jasons-MacBook-Pro.local (61682)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/05/15 15:50:44 -0500 Jasons-MacBook-Pro.local (61682)] INFO : Installing ActiveJob instrumentation
+[03/05/15 15:50:44 -0500 Jasons-MacBook-Pro.local (61682)] INFO : Installing ActiveRecord 4 instrumentation
+[03/05/15 15:50:44 -0500 Jasons-MacBook-Pro.local (61682)] INFO : Installing Net instrumentation
+[03/05/15 15:50:44 -0500 Jasons-MacBook-Pro.local (61682)] INFO : Installing deferred Rack instrumentation
+[03/05/15 15:50:44 -0500 Jasons-MacBook-Pro.local (61682)] INFO : Installing Rack::Builder middleware instrumentation
+[03/05/15 15:50:44 -0500 Jasons-MacBook-Pro.local (61682)] INFO : Installing Rails 3+ middleware instrumentation
+[03/05/15 15:50:44 -0500 Jasons-MacBook-Pro.local (61682)] INFO : Installing Rails 4 Controller instrumentation
+[03/05/15 15:50:44 -0500 Jasons-MacBook-Pro.local (61682)] INFO : Installing Rails 4 view instrumentation
+[03/05/15 15:50:44 -0500 Jasons-MacBook-Pro.local (61682)] INFO : Installing Rails 4 Error instrumentation
+[03/05/15 15:50:44 -0500 Jasons-MacBook-Pro.local (61682)] INFO : Finished instrumentation
+[03/05/15 15:53:14 -0500 Jasons-MacBook-Pro.local (62005)] INFO : Starting the New Relic agent in "test" environment.
+[03/05/15 15:53:14 -0500 Jasons-MacBook-Pro.local (62005)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "test" section of your newrelic.yml.
+[03/05/15 15:53:14 -0500 Jasons-MacBook-Pro.local (62005)] WARN : No configuration file found. Working directory = /Users/JWeeks/wdi/porjects/shmoovies_app/shmoovies_api/SchmovieApi
+[03/05/15 15:53:14 -0500 Jasons-MacBook-Pro.local (62005)] WARN : Looked in these locations (based on defaults): /Users/JWeeks/wdi/porjects/shmoovies_app/shmoovies_api/SchmovieApi/config/newrelic.yml, /Users/JWeeks/wdi/porjects/shmoovies_app/shmoovies_api/SchmovieApi/newrelic.yml, /Users/JWeeks/wdi/porjects/shmoovies_app/shmoovies_api/SchmovieApi/config/newrelic.yml, /Users/JWeeks/wdi/porjects/shmoovies_app/shmoovies_api/SchmovieApi/newrelic.yml, /Users/JWeeks/.newrelic/newrelic.yml, /Users/JWeeks/newrelic.yml
+[03/05/15 15:53:14 -0500 Jasons-MacBook-Pro.local (62005)] INFO : Environment: test
+[03/05/15 15:53:14 -0500 Jasons-MacBook-Pro.local (62005)] INFO : No known dispatcher detected.
+[03/05/15 15:53:14 -0500 Jasons-MacBook-Pro.local (62005)] INFO : Application: test
+[03/05/15 15:53:14 -0500 Jasons-MacBook-Pro.local (62005)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'test'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[03/05/15 15:53:14 -0500 Jasons-MacBook-Pro.local (62005)] INFO : Installing ActiveJob instrumentation
+[03/05/15 15:53:14 -0500 Jasons-MacBook-Pro.local (62005)] INFO : Installing ActiveRecord 4 instrumentation
+[03/05/15 15:53:14 -0500 Jasons-MacBook-Pro.local (62005)] INFO : Installing Net instrumentation
+[03/05/15 15:53:14 -0500 Jasons-MacBook-Pro.local (62005)] INFO : Installing deferred Rack instrumentation
+[03/05/15 15:53:14 -0500 Jasons-MacBook-Pro.local (62005)] INFO : Installing Rack::Builder middleware instrumentation
+[03/05/15 15:53:14 -0500 Jasons-MacBook-Pro.local (62005)] INFO : Installing Rails 3+ middleware instrumentation
+[03/05/15 15:53:14 -0500 Jasons-MacBook-Pro.local (62005)] INFO : Installing Rails 4 Controller instrumentation
+[03/05/15 15:53:14 -0500 Jasons-MacBook-Pro.local (62005)] INFO : Installing Rails 4 view instrumentation
+[03/05/15 15:53:14 -0500 Jasons-MacBook-Pro.local (62005)] INFO : Installing Rails 4 Error instrumentation
+[03/05/15 15:53:14 -0500 Jasons-MacBook-Pro.local (62005)] INFO : Finished instrumentation
