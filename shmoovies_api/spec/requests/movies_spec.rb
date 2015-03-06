@@ -37,7 +37,7 @@ describe 'Movie Requests' do
     end
   end
 
-
+# no udate or destory
 
 
 end
