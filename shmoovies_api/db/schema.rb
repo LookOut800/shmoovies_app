@@ -18,9 +18,16 @@ ActiveRecord::Schema.define(version: 20150305203704) do
 
   create_table "movies", force: :cascade do |t|
     t.string "title"
-    t.string "release_date"
-    t.string "mpaa_rating"
+    t.string "hori_pic"
+    t.string "vert_pic"
     t.string "description"
+    t.string "release_date"
+    t.string "tagline"
+    t.string "popularity"
+    t.string "runtime"
+    t.string "budget"
+    t.string "revenue"
+    t.string "mpaa"
   end
 
   create_table "reviews", force: :cascade do |t|
