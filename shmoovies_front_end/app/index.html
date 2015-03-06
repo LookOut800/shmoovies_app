@@ -34,9 +34,18 @@
     </section>
 
     <div id="movies-slider">
+
       <li></li>
+
     </div>
 
+    <section id='content'></section>
+    <script type='text/x-handlebars-template' id='movie-show'>
+    {{#movies each}}
+    <img src='http://image.tmdb.org/t/p/w500/{{poster_path}}'  />
+
+    {{/each}}
+    </script>
 
     <footer>
       <div>
