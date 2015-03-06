@@ -15,4 +15,21 @@ describe 'Reviews Requests' do
     end
   end
 
+  describe '#create' do
+    it 'creates a movie and post and returns' do
+      post "/movies/#{@movies.first.id}/reviews",
+      { review: {
+          author: "Bob McAuthor",
+          body: "I am a review body",
+          rating: "R"
+        }}.to_json,
+      {'Accept' => Mime::JSON, 'Content-Type' => Mime::JSON.to_s}
+      expect(response).to be_success
+      expect(response.content_type).to be Mime::JSON
+      rmovie = JSON.parse(response.body)
+    end
+  end
+
+
+
 end
