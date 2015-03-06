@@ -18,12 +18,20 @@ Tmdb.getMovie = function(n){
   });
 };
 
+
 Tmdb.renderShow = function(data){
   var template = Handlebars.compile($('#movie-show').html());
   $('#content').html(template({
     movie: data
   }));
-}
+};
+
+Tmdb.renderSlider = function(data){
+  var template = Handlebars.compile($('#movie-show').html());
+  $('#content').html(template({
+    movies: data
+  }));
+};
 
 Tmdb.getMoviesFromRails = function(){
   $.ajax({
@@ -36,28 +44,13 @@ Tmdb.getMoviesFromRails = function(){
   });
 };
 
-Tmdb.indexMovies = function(movies){
-  movies.forEach(Tmdb.renderMovie);
-};
-
-Tmdb.renderMovie = function(currentVal){
-  var html = '<article>';
-  html += '<h1 class="post-title">' + currentVal.title + '</h1>';
-  html += '<p class="post-body">' + currentVal.body + '</p>';
-  html += '<small class="post-author">' + currentVal.author + '</small>';
-  html += '<p>Comments: ' + currentVal.comments.length + '</p>';
-  html += '</article>';
-
-  $('section.main-content').append(html);
-};
-
 Tmdb.submitMovie = function(){
   if(event.preventDefault) event.preventDefault();
   $.ajax({
     url: Tmdb.rUrl + '/movies',
     type: 'POST',
     data: { movie: {
-              tmdb_id: $('input#post-title').val(),
+              XXXXXXXXXXXXXXXXXXXXXXXXX,
          }
       }
   }).done(function(data){
