@@ -1,12 +1,12 @@
 Movie.destroy_all
 
 movies = Movie.create([
-  {tmbd_id: 1},
-  {tmbd_id: 2},
-  {tmbd_id: 3},
-  {tmbd_id: 4},
-  {tmbd_id: 5},
-  {tmbd_id: 6}
+  {tmbd_id: 100},
+  {tmbd_id: 200},
+  {tmbd_id: 300},
+  {tmbd_id: 400},
+  {tmbd_id: 500},
+  {tmbd_id: 600}
 ])
 
 movies[0].reviews << Review.create(body:"The 1994 Chardonnay from Bob's Winery blends absurd sage overtones with a toasty albuterol aroma.", author: 'Adalberto (three toes) Alan', rating: "5")
