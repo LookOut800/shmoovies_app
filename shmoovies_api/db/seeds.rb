@@ -1,4 +1,4 @@
-Movies.destory_all
+Movie.destroy_all
 
 movies = Movie.create([
   {title: "title 1",release_date:"2012", mpaa_rating: "R", description: "description 1"},
