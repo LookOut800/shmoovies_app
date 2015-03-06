@@ -18,10 +18,7 @@ describe 'Movie Requests' do
     it 'creates movies' do
       post "/movies",
       { movie: {
-          title: "Movie Title",
-          release_date: "10-10-88",
-          mpaa_rating: "NR",
-          description: "It was a decent movie, not as good as that one with JLaw though."
+          tmbd_id: 2
         }}.to_json,
         {'Accept' => Mime::JSON, 'Content-Type' => Mime::JSON.to_s}
         expect(response).to be_success
@@ -30,6 +27,8 @@ describe 'Movie Requests' do
     end
   end
 
+#  describe '#show' do
+#    it 'get a post by '
 
 
 

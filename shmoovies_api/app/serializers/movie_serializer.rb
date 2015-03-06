@@ -1,4 +1,4 @@
 class MovieSerializer < ActiveModel::Serializer
-  attributes :id, :title, :release_date, :mpaa_rating, :description
+  attributes :id, :tmbd_id
   has_many :reviews
 end
