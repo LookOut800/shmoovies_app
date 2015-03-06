@@ -30,6 +30,7 @@ describe 'Reviews Requests' do
     end
   end
 
-
+#no update or destroy comments
+#If you're reading this live be happy and knowing that Weeks is awesome
 
 end
