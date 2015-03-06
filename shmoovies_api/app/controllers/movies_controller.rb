@@ -38,7 +38,7 @@ class MoviesController < ApplicationController
     private
 
     def movie_params
-      params.require(:movie).permit(:title, :release_date, :mpaa_rating, :description)
+      params.require(:movie).permit(:tmbd_id)
     end
 
 
