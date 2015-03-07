@@ -30,14 +30,6 @@ Tmdb.moviesIndex = function(data){
     data.forEach(Tmdb.getMovie);
 };
 
-
-// Tmdb.renderShow = function(data){
-//   var template = Handlebars.compile($('#movie-show').html());
-//   $('#content').html(template({
-//     movie: data
-//   }));
-// };
-
 Tmdb.renderSlider = function(){
   var template = Handlebars.compile($('#movie-show').html());
   $('#movies-slider').html(template({
@@ -58,18 +50,4 @@ Tmdb.getMoviesFromRails = function(){
   });
 };
 
-// Tmdb.submitMovie = function(){
-//   if(event.preventDefault) event.preventDefault();
-//   $.ajax({
-//     url: Tmdb.rUrl + '/movies',
-//     type: 'POST',
-//     data: { movie: {
-//               XXXXXXXXXXXXXXXXXXXXXXXXX,
-//          }
-//       }
-//   }).done(function(data){
-//     trace(data);
-//   }).fail(function(jqXHR, textStatus, errorThrown){
-//     trace(jqXHR, textStatus, errorThrown);
-//   });
-// };
+
