@@ -5,7 +5,6 @@ var Search = Search || {
 };
 
 
-
 $(document).ready(function(){
 
 Search.getSearchString();
@@ -16,7 +15,6 @@ Search.getSearchString = function(){
    $('#movie-query-submit').click(function(){
       searchString = $('#movie-query-input').val();
       Search.compareSearch(searchString);
-
   });
 };
 
@@ -26,14 +24,20 @@ Search.compareSearch = function(searchString){
   $.ajax({
     url: Search.tUrl + 'search/movie?query=' + searchString + Search.key,
     type: 'GET',
-  }).done(function(data){
-debugger;
-    Search.nextFunction
+  }).done(function(data){ 
+    Search.allMatchMovies(data);
   })
   .fail(function(jqXHR, textStatus, errorThrown){
-//    console.log(jqXHR, textStatus, errorThrown);
+  console.log(jqXHR, textStatus, errorThrown);
   console.log(data);
   });  
+};
 
+Search.allMatchMovies = function(allmovies){
+  allmovies.results.forEach(Search.singleResult);
+};
+
+Search.singleResult = function(singleMovie){
+// HANDLEBARS HERE!
 }
 
