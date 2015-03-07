@@ -12,8 +12,8 @@ Tmdb.getMovieShow = function(movie){
 };
 
 Tmdb.renderShow = function(data){
-  var template = Handlebars.compile($('#movie-show').html());
-  $('#content').html(template({
+  var template = Handlebars.compile($('#movie-info').html());
+  $('#show-content').html(template({
     movie: data
   }));
 };

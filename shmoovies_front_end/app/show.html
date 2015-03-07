@@ -19,6 +19,7 @@
       <header id="header" class="">
        <h1>Shmoovies movie show</h1>
       </header><!-- /header -->
+      <div id="movie-info"></div>
       <form id="review-form">
         <div class="forms">
           <div class="new-review-form">
@@ -49,5 +50,12 @@
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="js/app.js" type="text/javascript"></script>
+    <script type='text/x-handlebars-template' id='movie-show'>
+      {{#each movies}}
+        <img src='http://image.tmdb.org/t/p/w500/{{backdrop_path}}'  />
+      {{/each}}
+    </script>
+    <script src="js/tmdb.js" type="text/javascript"></script>
+    <script src="js/show.js" type="text/javascript"></script>
   </body>
 </html>
