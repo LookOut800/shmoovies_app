@@ -13,25 +13,23 @@ Search.getSearchString();
 });
 
 Search.getSearchString = function(){
-
-   $('forms.form-group').on('submit', function(event){
-
-   searchString = $('movie-query-input').val();
-
-    Search.compareSearch(searchString);
+   $('#movie-query-submit').click(function(){
+      searchString = $('#movie-query-input').val();
+debugger;
+      Search.compareSearch(searchString);
 
   });
 };
 
 
-Search.compareSearch = function(event){
+Search.compareSearch = function(searchString){
   if (event.preventDefault) event.preventDefault();
   $.ajax({
     url: Search.rUrl + '/movies',
     type: 'GET',
   }).done(function(data){
     // console.log(data);
-    Search.moviesIndex(data);
+    Search.nextFunction
   })
   .fail(function(jqXHR, textStatus, errorThrown){
     console.log(jqXHR, textStatus, errorThrown);
