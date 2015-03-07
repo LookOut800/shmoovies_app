@@ -1,14 +1,14 @@
 body {
-  @include defaults
-}
+  @include defaults;
+  font: $body-font;
+  background-color: $black-10;
+  margin: 0;
 
-section.main-content {
-  text-align: center;
-  padding-top: 100px;
-
-  header {
-    font-family: Gill Sans Extrabold, sans-serif;
+  section .main-content {
+    font-size: 250px;
+    font: $header-font;
+    #header h1 {
+      text-align: center;
+    }
   }
-
-
 }

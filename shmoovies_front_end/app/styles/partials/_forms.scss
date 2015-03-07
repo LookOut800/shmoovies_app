@@ -1,0 +1,25 @@
+form#query-form {
+  height: 100px;
+  width: 100%;
+  padding: 100px;
+  display: inline;
+  text-align: center;
+
+  div.find-movie-form {
+    label {
+      font: $header-font;
+    }
+    #movie-query-input {
+      height: 30px;
+      width: 250px;
+      border-radius: 10px;
+    }
+  }
+
+  #movie-query-submit{
+    @include button($black-70, $white, 10px);
+    font-size: 30px;
+    padding: 15px;
+    margin: 20px;
+  }
+}

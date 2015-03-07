@@ -1,3 +1,15 @@
-footer {
+footer #footer-style {
+  text-align: center;
+  font: $body-font;
+  h4 {
+    font: $body-font;
+    padding: 15px;
+  }
+  .social-media-link{
+    @include button($black-70, $white, 10px);
+    padding: 20px;
+    margin: 20px;
+    font-size: 25px;
 
+  }
 }

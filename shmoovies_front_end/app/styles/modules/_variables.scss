@@ -1,0 +1,37 @@
+/*—————————————————————————————————————————
+*****************Z-Index********************
+——————————————————————————————————————————*/
+$z-body: 0;
+$z-nav: 1;
+/*—————————————————————————————————————————
+*****************Colors********************
+——————————————————————————————————————————*/
+// gray scale
+$black: #000000;
+$black-90: #414042;
+$black-80: #58595b;
+$black-70: #6d6e71;
+$black-60: #808184;
+$black-50: #929497;
+$black-40: #a6a8ab;
+$black-30: #bbbdbf;
+$black-20: #d0d2d3;
+$black-10: #e5e6e7;
+$white: #ffffff;
+
+/*——————————————————————————————————————————
+***************TYPOGRAPHY*****************
+——————————————————————————————————————————*/
+
+$header-font: Helvetica, Arial, sans-serif;
+$body-font: Georgia, Times, serif;
+$mono-spaced-font: monospace;
+
+$base-font-size: 14px;
+$large-font-size: 1.2em;
+$xlarge-font-size: 1.5em;
+$xxlarge-font-size: 2em;
+$xxxlarge-font-size: 3.3em;
+
+$base-line-height: 20px;
+$large-line-height: 24px;
