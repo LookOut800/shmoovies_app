@@ -25,10 +25,6 @@ Tmdb.getMovie = function(movie){
   });
 };
 
-var proveIt = function(){
-  console.log(deferreds);
-};
-
 Tmdb.moviesIndex = function(data){
     setTimeout(Tmdb.renderSlider, 700);
     data.forEach(Tmdb.getMovie);
@@ -43,10 +39,8 @@ Tmdb.moviesIndex = function(data){
 // };
 
 Tmdb.renderSlider = function(){
-
   var template = Handlebars.compile($('#movie-show').html());
-  $('#content').html(template({
-
+  $('#movies-slider').html(template({
     movies: deferreds
   }));
 };

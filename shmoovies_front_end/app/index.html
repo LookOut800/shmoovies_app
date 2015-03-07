@@ -31,9 +31,7 @@
           </div>
         </div>
       </form>
-
-    <div id="movies-slider">
-    </div>
+      <div id="movies-slider"></div>
 
     <footer>
       <div id="footer-style">
@@ -46,10 +44,13 @@
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/handlebars/handlebars.js"></script>
-     <section id='content'></section>
+    <section id='content'></section>
     <script type='text/x-handlebars-template' id='movie-show'>
-    <img src='http://image.tmdb.org/t/p/w500/{{movie.poster_path}}'  />
+      {{#each movies}}
+        <img src='http://image.tmdb.org/t/p/w500/{{backdrop_path}}'  />
+      {{/each}}
     </script>
+
     <script src="js/main.js" type="text/javascript"></script>
     <script src="js/tmdb.js" type="text/javascript"></script>
     <script src="js/search.js" type="text/javascript"></script>
