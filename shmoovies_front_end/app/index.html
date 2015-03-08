@@ -51,12 +51,12 @@
     <section id='content'></section>
     <script type='text/x-handlebars-template' id='movie-show'>
       {{#each movies}}
-        <img src='http://image.tmdb.org/t/p/w500/{{backdrop_path}}'  />
+        <a href='/show.html?{{id}}'><img src='http://image.tmdb.org/t/p/w500/{{backdrop_path}}'  /></a>
       {{/each}}
     </script>
     <script type='text/x-handlebars-template' id='results'>
       {{#each results}}
-        <h1>{{title}}</h1>
+        <h1><a href='/show.html?{{id}}'>{{title}}</a></h1>
       {{/each}}
     </script>
 
