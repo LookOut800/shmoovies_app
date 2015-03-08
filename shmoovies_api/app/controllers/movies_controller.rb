@@ -1,3 +1,5 @@
+require 'pry'
+
 class MoviesController < ApplicationController
   def index
     @movies = Movie.all
@@ -14,7 +16,7 @@ class MoviesController < ApplicationController
   end
 
   def show
-    @movie = Movie.find(params[:id])
+    @movie = Movie.where(tmbd_id: params[:id])
     render json: @movie, status: 200
   end
 
