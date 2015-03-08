@@ -17,16 +17,25 @@
     <section class="main-content">
       <header id="header" class="">
       </header><!-- /header -->
-      <div id="show-content">
+      <div id="show-content"></div>
         <script type='text/x-handlebars-template' id='movie-info'>
           <div id="movie-poster-show">
             <img src='http://image.tmdb.org/t/p/w500/{{movie.poster_path}}'/>
           </div>
         </script>
-      </div>
-      <div id="movie-show-info">
 
-      </div>
+      <div id='show-reviews'></div>
+      <script type='text/x-handlebars-template' id='review-info'>
+          {{#each movie.reviews}}
+            <div id='comment-{{id}}'>
+              <p>{{body}}</p>
+              <small>{{author}}</small>
+            </div>
+          {{/each}}
+          </div>
+        </script>
+
+
       <form id="review-form">
 
           <div class="new-review-form">
