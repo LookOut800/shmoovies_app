@@ -20,11 +20,14 @@
       <div id="show-content"></div>
         <script type='text/x-handlebars-template' id='movie-info'>
           <div id="movie-poster-show">
-            <img src='http://image.tmdb.org/t/p/w500/{{movie.poster_path}}' style=float:left />
-              <h1>{{movie.title}}</h1>
-              <h4>{{movie.tagline}}</h4>
-              <p>{{movie.overview}}</p>
+            <img src='http://image.tmdb.org/t/p/w500/{{movie.poster_path}}'>
           </div>
+            <div id="movie-text-show">
+                <h1>{{movie.title}}</h1>
+                <h4>{{movie.tagline}}</h4>
+                <p>{{movie.overview}}</p>
+                <p>Total Revenue: ${{movie.revenue}}</p>           
+            </div>
         </script>
 
       <div id='show-reviews'></div>

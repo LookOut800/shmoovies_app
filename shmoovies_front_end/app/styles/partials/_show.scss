@@ -6,16 +6,22 @@ body {
     #show-content{
       #movie-poster-show{
         img{
-          padding: 0px 15px 0px 0px;
+          padding: 0px 40px 0px 0px;
         }
       }
+      #movie-text-show{
+        padding: 20px 0px 0px 0px;
+        text-align: center;
+      }  
     }
 
 
 
+
     #review-form {
+      margin: 0 auto;
       .new-review-form {
-        width: 500px;
+
         #new-review {
           padding: 10px;
         }
