@@ -18,26 +18,26 @@ Search.getSearchString = function(){
   });
 };
 
-
 Search.compareSearch = function(searchString){
   if (event.preventDefault) event.preventDefault();
   $.ajax({
     url: Search.tUrl + 'search/movie?query=' + searchString + Search.key,
     type: 'GET',
-  }).done(function(data){ 
-    Search.allMatchMovies(data);
+  }).done(function(data){
+    Search.render(data)
   })
   .fail(function(jqXHR, textStatus, errorThrown){
-  console.log(jqXHR, textStatus, errorThrown);
-  console.log(data);
-  });  
+    console.log(jqXHR, textStatus, errorThrown);
+  });
+
 };
 
-Search.allMatchMovies = function(allmovies){
-  allmovies.results.forEach(Search.singleResult);
-};
+Search.render = function(data){
+   var templateS = Handlebars.compile($('#results').html());
+   console.log(data);
+  $('#search-results').html(templateS({
+    results: data.results
+  }));
 
-Search.singleResult = function(singleMovie){
-// HANDLEBARS HERE!
-}
+};
 

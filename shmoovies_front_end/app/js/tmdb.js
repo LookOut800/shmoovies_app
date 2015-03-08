@@ -18,7 +18,6 @@ Tmdb.getMovie = function(movie){
   }).done(function(data){
     def = data;
     deferreds.push(def);
-    console.log(deferreds)
   })
   .fail(function(jqXHR, textStatus, errorThrown){
     console.log(jqXHR, textStatus, errorThrown);
