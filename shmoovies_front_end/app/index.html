@@ -31,6 +31,7 @@
           </div>
         </div>
       </form>
+      <div id="search-results"></div>
 
       <div id="scroller-div">
         <div id="movies-slider"></div>
@@ -51,6 +52,11 @@
     <script type='text/x-handlebars-template' id='movie-show'>
       {{#each movies}}
         <img src='http://image.tmdb.org/t/p/w500/{{backdrop_path}}'  />
+      {{/each}}
+    </script>
+    <script type='text/x-handlebars-template' id='results'>
+      {{#each results}}
+        <h1>{{title}}</h1>
       {{/each}}
     </script>
 
