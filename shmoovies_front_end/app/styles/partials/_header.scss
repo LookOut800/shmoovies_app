@@ -1,4 +1,4 @@
-logo#brand-logo {
+logo.brand-logo {
   font: 100% Helvetica, sans-serif;
   font-size: 80px;
   text-align: center;
@@ -12,5 +12,13 @@ logo#brand-logo {
     padding-bottom: 10px;
     margin: 0px;
     background: $black;
+    width: 100%;
+
+    a, a:visited {
+      text-decoration: none;
+      color: $white;
+    }
+
   }
+
 }

@@ -1,15 +1,17 @@
 footer #footer-style {
+  width: 100%;
+  height: 100px;
   text-align: center;
+  display: inline-block;
   font: $body-font;
   h4 {
     font: $body-font;
     padding: 15px;
   }
   .social-media-link{
-    @include button($black-70, $white, 10px);
+    @include button($black-70, $white, 5px);
     padding: 20px;
     margin: 20px;
     font-size: 25px;
-
   }
 }

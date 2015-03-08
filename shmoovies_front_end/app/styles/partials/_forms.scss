@@ -6,13 +6,16 @@ form#query-form {
   text-align: center;
 
   div.find-movie-form {
-    label {
-      font: $header-font;
+    #query-label {
+      font: $body-font;
+      font-size: 18px;
+      color: $black-50;
     }
     #movie-query-input {
-      height: 30px;
-      width: 250px;
+      height: 35px;
+      width: 350px;
       border-radius: 10px;
+
     }
   }
 
@@ -20,6 +23,9 @@ form#query-form {
     @include button($black-70, $white, 10px);
     font-size: 30px;
     padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 5px;
     margin: 20px;
   }
 }

@@ -2,19 +2,33 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/main.css">
     <title>Shmoovies</title>
   </head>
   <body>
-
-    <logo id="user-movie-img">
+  <!--     <logo id="user-movie-img">
+    </logo> -->
+    <logo class="brand-logo">
+      <h1><a href='/'>Shmoovies</a></h1>
     </logo>
+    <nav class="navbar">
+    </nav>
+
     <section class="main-content">
       <header id="header" class="">
-       <h1><a href='/'>Shmoovies</a></h1>
       </header><!-- /header -->
-      <div id="show-content"></div>
+      <div id="show-content">
+        <script type='text/x-handlebars-template' id='movie-info'>
+          <div id="movie-poster-show">
+            <img src='http://image.tmdb.org/t/p/w500/{{movie.poster_path}}'/>
+          </div>
+        </script>
+      </div>
+      <div id="movie-show-info">
+
+      </div>
       <form id="review-form">
-        <div class="forms">
+
           <div class="new-review-form">
             <h2>New review !</h2>
             <label for="new-review">new review Here </label>
@@ -23,25 +37,22 @@
           <div class="form-group">
             <input type="submit" id='submit' value="Find Shmoovie" />
           </div>
-        </div>
+
       </form>
     </section>
 
 
     <footer>
-      <div>
+      <div id="footer-style">
         <h4>Shmoovers</h4>
-        <button type="">M Scoial</button>
-        <button type="">C Social</button>
-        <button type="">J Social</button>
+        <button class="social-media-link" type="">Merx Social</button>
+        <button class="social-media-link" type="">Chachi Social</button>
+        <button class="social-media-link" type="">Weeks Social</button>
       </div>
     </footer>
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/handlebars/handlebars.js"></script>
-    <script type='text/x-handlebars-template' id='movie-info'>
-        <img src='http://image.tmdb.org/t/p/w500/{{movie.backdrop_path}}'/>
-    </script>
     <script src="js/show.js" type="text/javascript"></script>
   </body>
 </html>

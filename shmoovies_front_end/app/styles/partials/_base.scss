@@ -4,11 +4,28 @@ body {
   background-color: $black-10;
   margin: 0;
 
-  section .main-content {
+  section.main-content {
     font-size: 250px;
     font: $header-font;
     #header h1 {
       text-align: center;
+    }
+    #show-content {
+      // text-align: center;
+      margin: 10px;
+
+      #movie-poster-show {
+
+          padding: 10px;
+          margin: 10px;
+          float: left;
+
+      }
+    }
+    .review-form {
+      float: right;
+      padding: 20px;
+      border: 1px solid $black;
     }
   }
 }

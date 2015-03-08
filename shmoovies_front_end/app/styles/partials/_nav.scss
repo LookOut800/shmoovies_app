@@ -1,12 +1,13 @@
 .navbar {
-  height: 75px;
+  height: 55px;
   // position: fixed;
   top: 60px;
   left: 0;
   padding-left: 10px;
   width: 100%;
   background-color: rgba(68, 51, 43, 0.9);
-
+  background-image:
+    linear-gradient(rgba(68, 51, 43, 0.9), #20150D);
   ul {
     @include defaults;
     list-style: none;
