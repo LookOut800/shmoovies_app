@@ -42,7 +42,6 @@ Tmdb.getReviews = function(num){
     url: Tmdb.rUrl + '/movies/' + num,
     type: 'GET',
   }).done(function(data){
-    Tmdb.movieId = data[0].id;
     Tmdb.reviewLogic(data);
   })
   .fail(function(jqXHR, textStatus, errorThrown){
@@ -50,10 +49,11 @@ Tmdb.getReviews = function(num){
   });
 };
 Tmdb.reviewLogic = function(data){
+
   if (data == false) {
     Tmdb.renderSubmit();
   } else {
-
+    Tmdb.movieId = data[0].id;
     Tmdb.renderReviews(data);
   };
 };
