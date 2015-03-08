@@ -1,10 +1,24 @@
 section.main-content {
-  #movies-slider {
-  height: 200px;
-  width: 100%;
-  border: 1px solid $black;
+  #scroller-div {
+  height: 281px;
+  width: 80%;
+  // margin: 0 auto 0 auto;
+  // display: inline-block;
+  overflow-x: scroll;
+  overflow-y: hidden;
   background-color: $white;
-  margin-left: -1px;
+  margin: 0 auto 0 auto;
+
+  #movies-slider{
+    width: 3000px;
+    height: 281px;
+    img {
+      // position: relative;
+      display: inline-block;
+      float: left;
+    }
+  }
+
     #slider-banner {
       text-align: center;
     }
