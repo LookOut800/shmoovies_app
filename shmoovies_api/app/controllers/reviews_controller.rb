@@ -1,3 +1,4 @@
+require 'pry'
 class ReviewsController < ApplicationController
   def index
     if params[:movie_id]
