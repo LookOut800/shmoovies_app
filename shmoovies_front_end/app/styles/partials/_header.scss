@@ -7,20 +7,27 @@ logo.brand-logo {
   padding: 0px;
   width: 100%;
   font-family: 'Henny Penny', cursive;
+  text-decoration: none;
+  text-decoration-color: white;
 
+  a{
+    font-size: 50px;
+    text-decoration: none;
+  }
   h1 {
     padding-top: 0px;
     padding-bottom: 0px;
     margin: 0px;
     background: $black;
-
+    text-decoration: none;
     margin: 0px;
     font-size: 50px;
 
     a, a:visited {
-      text-decoration: none;
+
       color: $white;
       font-size: 5px;
+      text-decoration: none;
     }
 
   }
