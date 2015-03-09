@@ -1,5 +1,18 @@
 var Reg = Reg || {};
 
+$(document).ready(function(){
+  Reg.setupAjaxRequests();
+
+  $('#sign_in').on('click', function(){
+    Reg.submitLogin();
+  });
+
+  $('#sign_up').on('click', function(){
+    Reg.submitRegistration();
+  });
+
+});
+
 Reg.submitRegistration = function(event) {
   event.preventDefault();
 
@@ -27,7 +40,7 @@ Reg.submitLogin = function(event) {
     $.ajax({
       url: apiHost + '/users/sign_in',
       type: 'POST',
-      data: {user: {email: $('').val(), password: $('').val()}},
+      data: {user: {email: $('#email').val(), password: $('#password').val()}},
     })
     .done(loginSuccess)
     .fail(function(err) {
