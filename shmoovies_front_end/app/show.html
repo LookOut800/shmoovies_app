@@ -48,12 +48,15 @@
       <div id='show-reviews'>
         <script type='text/x-handlebars-template' id='review-info'>
           {{#each movie.reviews}}
+          <div id='one'>
             <div id='comment-{{id}}'>
               <p>{{body}}</p>
               <small>{{author}}</small>
             </div>
           {{/each}}
           </div>
+          </div>
+
         </script>
       </div>
     </section>

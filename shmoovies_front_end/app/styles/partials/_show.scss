@@ -2,6 +2,15 @@
 body {
 
   .main-content {
+    #show-reviews{
+      #one{
+        p:hover{
+          font-size: 125%;
+          font-family: 'Henny Penny', cursive;
+        }
+      }
+    }
+  }
 
     #show-content{
       #movie-poster-show{
@@ -18,6 +27,7 @@ body {
 
 
 
+
     #review-form {
       margin: 0 auto;
       .new-review-form {
@@ -28,4 +38,4 @@ body {
       }
     }
   }
-}
+
