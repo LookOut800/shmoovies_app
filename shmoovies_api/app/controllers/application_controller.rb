@@ -1,5 +1,12 @@
 class ApplicationController < ActionController::API
   include ActionController::Serialization
+  include ActionController::HttpAuthentication::Token::ControllerMethods
 
- # http://railscasts.com/episodes/409-active-model-serializers?view=asciicast
+  protected
+
+  def authenticate
+    authenticate_or_request_with_http_token do |token, options|
+      User.find_by(token: token)
+    end
+  end
 end
