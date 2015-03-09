@@ -9,6 +9,7 @@ var Tmdb = Tmdb || {
 
 $(document).ready(function(){
   Tmdb.getMoviesFromRails();
+  authToken = localStorage.getItem('authToken');
 });
 
 Tmdb.getMovie = function(movie){

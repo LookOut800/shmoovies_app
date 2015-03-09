@@ -10,6 +10,7 @@ var Tmdb = Tmdb || {
 $(document).ready(function(){
   var locate = window.location.search
   locate = locate.substring(1, locate.length);
+  authToken = localStorage.getItem('authToken');
 
   Tmdb.getMovieShow(locate);
   Tmdb.getReviews(locate);
@@ -57,6 +58,15 @@ Tmdb.reviewLogic = function(data){
     Tmdb.renderReviews(data);
   };
 };
+
+Tmdb.acceptFailure = function(error) {
+    // If things are failing, deal with specific errors
+    // If status is unauthorized, then redirect to a login route/page
+    if (error.status === 401) {
+      console.log('SEND TO LOGIN SCREEN');
+      window.location.href = '/sign_in.html';
+    }
+  };
 Tmdb.renderShow = function(data){
   var template = Handlebars.compile($('#movie-info').html());
   $('#show-content').html(template({
@@ -108,9 +118,6 @@ Tmdb.submitReview = function(){
   }).done(function(data){
     console.log(data);
   })
-  .fail(function(jqXHR, textStatus, errorThrown){
-    console.log(jqXHR, textStatus, errorThrown);
-  });
-
+  .fail(Tmdb.acceptFailure);
 };
 
