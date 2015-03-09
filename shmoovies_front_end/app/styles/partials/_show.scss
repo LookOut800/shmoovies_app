@@ -21,9 +21,22 @@ body {
       #movie-text-show{
         padding: 20px 0px 0px 0px;
         text-align: center;
-      }  
+      }
     }
+  div#search-results {
+    width: 90%;
+    // height: 250px;
+    max-height: 250px;
+    border: 3px solid gray;
+    margin: 0 auto 15px auto;
+    padding-left: 10px;
+    overflow-x: scroll;
 
+    h1 a, a:visited {
+      color: $black-50;
+      text-decoration: none;
+    }
+  }
 
 
 
