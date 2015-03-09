@@ -30,8 +30,23 @@
             </div>
         </script>
 
-      <div id='show-reviews'></div>
-      <script type='text/x-handlebars-template' id='review-info'>
+
+      <div id='review-submit'>
+      <form id="review-form">
+
+          <div class="new-review-form">
+            <h2>Leave your opinion</h2>
+            <label for="new-review"></label>
+            <input type="text" placeholder="write review here" id="newReview" />
+            <input type="text" placeholder="name" id="reviewAuthor" />
+          </div>
+          <div class="form-group">
+            <input type="submit" id='submit' value="submit" />
+          </div>
+      </form>
+      </div>
+      <div id='show-reviews'>
+        <script type='text/x-handlebars-template' id='review-info'>
           {{#each movie.reviews}}
             <div id='comment-{{id}}'>
               <p>{{body}}</p>
@@ -40,30 +55,24 @@
           {{/each}}
           </div>
         </script>
-
-      <div id='review-submit'>
-      <form id="review-form">
-
-          <div class="new-review-form">
-            <h2>New review !</h2>
-            <label for="new-review">new review Here </label>
-            <input type="text" placeholder="new review here" id="newReview" />
-            <input type="text" placeholder="Author" id="reviewAuthor" />
-          </div>
-          <div class="form-group">
-            <input type="submit" id='submit' value="Find Shmoovie" />
-          </div>
-      </form>
       </div>
     </section>
 
 
-    <footer>
+        <footer>
       <div id="footer-style">
         <h4>Shmoovers</h4>
-        <button class="social-media-link" type="">Merx Social</button>
-        <button class="social-media-link" type="">Chachi Social</button>
-        <button class="social-media-link" type="">Weeks Social</button>
+        <a href="https://twitter.com/charlietal" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @charlietal</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+
+        <a href="https://twitter.com/MaxBlaushild" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @MaxBlaushild</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+
+
+        <a href="https://twitter.com/RealWeeks" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @RealWeeks</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
       </div>
     </footer>
 
