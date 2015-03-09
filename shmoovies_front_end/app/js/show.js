@@ -60,6 +60,8 @@ Tmdb.reviewLogic = function(data){
 };
 
 Tmdb.acceptFailure = function(error) {
+    debugger;
+
     // If things are failing, deal with specific errors
     // If status is unauthorized, then redirect to a login route/page
     if (error.status === 401) {
@@ -105,8 +107,22 @@ Tmdb.submitMovie = function(data){
   });
 };
 
+ Tmdb.setupAjaxRequests = function() {
+    $.ajaxPrefilter(function( options ) {
+      options.headers = {};
+      options.headers['AUTHORIZATION'] = "Token token=" + authToken;
+    });
+  };
+
 Tmdb.submitReview = function(){
+
   if(event.preventDefault) event.preventDefault();
+
+  $.ajaxPrefilter(function( options ) {
+      options.headers = {};
+      options.headers['AUTHORIZATION'] = "Token token=" + authToken;
+    });
+
   $.ajax({
     url: Tmdb.rUrl + '/movies/' + Tmdb.movieId + '/reviews',
     type: 'POST',
@@ -114,10 +130,14 @@ Tmdb.submitReview = function(){
               body: $('#newReview').val(),
               author: $('#reviewAuthor').val()
          }
-      }
+      },
   }).done(function(data){
     console.log(data);
   })
   .fail(Tmdb.acceptFailure);
+
+  $.ajaxPrefilter(function( options ) {
+      options.headers = {};
+    });
 };
 

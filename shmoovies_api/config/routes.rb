@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  resources :users, defaults: {format: :json}, only: [:create] do
+    post 'sign_in', on: :collection
+  end
   resources :movies, only: [:index, :create, :show] do
-    resources :users, :reviews, only: [:show, :create]
-      post 'sign_in', on: :collection
+    resources :reviews, only: [:show, :create]
   end
 
 end

@@ -26,12 +26,12 @@
         <form id='loginForm'>
           <fieldset>
             <label for='email'>
-              <input type='text' name='email' autofocus='true' />
+              <input type='text' id='email' name='email' autofocus='true' />
               User e-mail
             </label>
             <br>
             <label for='password'>
-              <input type='password' name='password' />
+              <input type='password' id='password' name='password' />
               Password
             </label>
           </fieldset>
@@ -80,18 +80,7 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/handlebars/handlebars.js"></script>
     <section id='content'></section>
-    <script type='text/x-handlebars-template' id='movie-show'>
-      {{#each movies}}
-        <a href='/show.html?{{id}}'><img src='http://image.tmdb.org/t/p/w500/{{backdrop_path}}'  /></a>
-      {{/each}}
-    </script>
-    <script type='text/x-handlebars-template' id='results'>
-      {{#each results}}
-        <h1><a href='/show.html?{{id}}'>{{title}}</a></h1>
-      {{/each}}
-    </script>
-
-        <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 
   </body>
 </html>

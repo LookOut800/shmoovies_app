@@ -1,48 +1,39 @@
 var Reg = Reg || {};
 
-$(document).ready(function(){
-  Reg.setupAjaxRequests();
 
-  $('#sign_in').on('click', function(){
-    Reg.submitLogin();
-  });
-
-  $('#sign_up').on('click', function(){
-    Reg.submitRegistration();
-  });
-
-});
 
 Reg.submitRegistration = function(event) {
   event.preventDefault();
-
   $.ajax({
-    url: apiHost + '/users',
+    url: 'http://localhost:3000/users',
     type: 'POST',
     data: {user: {email: $('#email').val(), password: $('#password').val()}},
     })
-    .done(loginSuccess)
+    .done(Reg.loginSuccess)
     .fail(function(err) {
       console.log(err);
     });
 
-    return false;
   };
 
 Reg.loginSuccess = function(userData) {
+
   localStorage.setItem('authToken', userData.token);
   console.log('logged in!');
+  debugger;
+
   history.back();
 };
 
 Reg.submitLogin = function(event) {
+
   event.preventDefault();
     $.ajax({
-      url: apiHost + '/users/sign_in',
+      url: 'http://localhost:3000/users/sign_in',
       type: 'POST',
-      data: {user: {email: $('#email').val(), password: $('#password').val()}},
+      data: {email: $('#email').val(), password: $('#password').val()},
     })
-    .done(loginSuccess)
+    .done(Reg.loginSuccess)
     .fail(function(err) {
       console.log(err);
     });
@@ -56,3 +47,15 @@ Reg.submitLogin = function(event) {
       options.headers['AUTHORIZATION'] = "Token token=" + authToken;
     });
   };
+
+$(document).ready(function(){
+
+  $('#sign_in').on('click', function(){
+    Reg.submitLogin(event);
+  });
+
+  $('#sign_up').on('click', function(){
+    Reg.submitRegistration(event);
+  });
+
+});
