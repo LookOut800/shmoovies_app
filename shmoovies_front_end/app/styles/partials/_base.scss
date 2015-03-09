@@ -11,23 +11,25 @@ body {
       text-align: center;
     }
     #show-content {
-      // text-align: center;
       margin: 10px;
 
       #movie-poster-show {
-          padding: 10px;
-          margin: 10px;
-          float: left;
+        padding: 10px;
+        margin: 10px;
+        float: left;
       }
     }
     div#search-results {
-      padding: 80px;
-      width: 400px;
-      h1 a {
-        padding: 10px;
-        display: inline;
-        text-decoration: none;
+      width: 90%;
+      max-height: 250px;
+      border: 2px solid gray;
+      margin: 0 auto 15px auto;
+      padding-left: 10px;
+      overflow-x: scroll;
+
+      h1 a, a:visited {
         color: $black-50;
+        text-decoration: none;
       }
     }
     .review-form {

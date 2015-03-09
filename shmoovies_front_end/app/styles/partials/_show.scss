@@ -1,6 +1,4 @@
-
 body {
-
   .main-content {
     #show-reviews{
       #one{
@@ -11,44 +9,25 @@ body {
       }
     }
   }
-
-    #show-content{
-      #movie-poster-show{
-        img{
-          padding: 0px 40px 0px 0px;
-        }
-      }
-      #movie-text-show{
-        padding: 20px 0px 0px 0px;
-        text-align: center;
+  #show-content{
+    #movie-poster-show{
+      img{
+        padding: 0px 40px 0px 0px;
       }
     }
-  div#search-results {
-    width: 90%;
-    // height: 250px;
-    max-height: 250px;
-    border: 3px solid gray;
-    margin: 0 auto 15px auto;
-    padding-left: 10px;
-    overflow-x: scroll;
-
-    h1 a, a:visited {
-      color: $black-50;
-      text-decoration: none;
+    #movie-text-show{
+      padding: 20px 0px 0px 0px;
+      text-align: center;
     }
   }
-
-
-
-
-    #review-form {
-      margin: 0 auto;
-      .new-review-form {
-
-        #new-review {
-          padding: 10px;
-        }
+  #review-form {
+    margin: 0 auto;
+    .new-review-form {
+      #new-review {
+        padding: 10px;
       }
     }
   }
+}
+
 

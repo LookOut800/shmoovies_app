@@ -10,12 +10,12 @@ form#query-form {
       font: $body-font;
       font-size: 18px;
       color: $black-50;
+      padding-right: 10px;
     }
     #movie-query-input {
       height: 35px;
       width: 350px;
       border-radius: 10px;
-
     }
   }
 
@@ -27,5 +27,31 @@ form#query-form {
     padding-right: 25px;
     border-radius: 5px;
     margin: 20px;
+  }
+}
+section.main-content {
+  div#review-submit {
+    button#post-movie {
+      @include button($black-70, $white, 5px);
+    }
+    #review-form {
+      div {
+        input#newReview {
+          height: 35px;
+          width: 350px;
+          border-radius: 5px;
+        }
+        input#reviewAuthor {
+          height: 35px;
+          width: 150px;
+          border-radius: 5px;
+        }
+        input#submit {
+          @include button($black-70, $white, 5px);
+          font-size: 18px;
+          padding: 8px;
+        }
+      }
+    }
   }
 }

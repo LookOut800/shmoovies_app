@@ -10,7 +10,8 @@ logo.brand-logo {
   text-decoration: none;
   text-decoration-color: white;
 
-  a{
+  a, a:visited {
+    color: $white;
     font-size: 50px;
     text-decoration: none;
   }
@@ -35,6 +36,8 @@ logo.brand-logo {
     color: $white;
     background: $black;
     margin: 0px;
+    margin-top: -20px;
+    padding-bottom: 13px;
   }
 
 }
