@@ -4,10 +4,11 @@ var Reg = Reg || {};
 
 Reg.submitRegistration = function(event) {
   event.preventDefault();
+  debugger;
   $.ajax({
     url: 'http://localhost:3000/users',
     type: 'POST',
-    data: {user: {email: $('#email').val(), password: $('#password').val()}},
+    data: {user: {name: $('#username').val(), email: $('#email').val(), password: $('#password').val()}},
     })
     .done(Reg.loginSuccess)
     .fail(function(err) {
@@ -17,10 +18,11 @@ Reg.submitRegistration = function(event) {
   };
 
 Reg.loginSuccess = function(userData) {
-
-  localStorage.setItem('authToken', userData.token);
-  console.log('logged in!');
   debugger;
+  localStorage.setItem('authToken', userData.token);
+  localStorage.setItem('username', userData.username);
+
+  console.log('logged in!');
 
   history.back();
 };

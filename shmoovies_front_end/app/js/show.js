@@ -10,7 +10,8 @@ var Tmdb = Tmdb || {
 $(document).ready(function(){
   var locate = window.location.search
   locate = locate.substring(1, locate.length);
-  authToken = localStorage.getItem('authToken');
+
+  var authToken = localStorage.getItem('authToken');
 
   Tmdb.getMovieShow(locate);
   Tmdb.getReviews(locate);
@@ -128,7 +129,7 @@ Tmdb.submitReview = function(){
     type: 'POST',
     data: { review: {
               body: $('#newReview').val(),
-              author: $('#reviewAuthor').val()
+              author: localStorage.username
          }
       },
   }).done(function(data){
